@@ -1,0 +1,210 @@
+@use '../../lib/service.scss'  as s;
+ 
+.header__content {
+    @extend .section__content;
+    display: flex;
+    padding: s.space(4) 0;
+    justify-content: space-between;
+   
+}
+.header {
+    @extend .section;
+    background: s.color('backgroundDark');
+}
+.ad__content {
+    @extend .section__content;
+    display: flex;
+    padding: s.space(4) 0;
+    justify-content: space-between;
+
+}
+.ad__block {
+    display: flex;
+    gap: s.space(8);
+    align-items: center;
+    align-self: stretch;
+}
+.ad__title {
+    font-size: 14px;
+    margin-left: 140px;
+
+}
+.ad__link {
+    color: #06C;
+    margin-left: 180px;
+    font-size: 14px;
+    @include s.click;
+    @include s.linkAction;
+}
+.header__block {
+    display: flex;
+    gap: s.space(8);
+    align-items: center;
+}
+.header__icon {
+   @include s.click; 
+}
+.header__link {
+   
+    color: s.color('whiteLight');
+    @include s.click;
+}
+.header__link {
+    font-size: s.size('small');
+
+}
+
+.product {
+    @extend .section;
+    padding-top: s.space(20);
+    padding-bottom: s.space(20);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+
+}
+.product__content {
+    display: grid;
+    gap: s.space(5);
+    text-align: center;
+    align-content: center;
+    margin-top: -300px;
+}
+.product__title {
+    font-size: 56px;
+    font-weight: bold;
+    // color: s.color('fontDark');
+}
+.produck__description {
+    font-size: 28px;
+}
+.product__action {
+    display: flex;
+    align-items: center;
+    gap: s.space(5);
+    justify-content: center;
+    @include s.click;
+}
+.product__link {
+    @include s.linkAction;
+}
+.product__big {
+    max-height: 700px;
+    height: 100vh;
+    background-size: cover;
+    @media all and (width < s.screen('tablet')) {
+        background-size: 150%;
+        max-height: 50px;
+    }
+   
+}
+.product__small {
+    max-height: 580px;
+    height: 500vh;
+    background-size: cover;
+    @media all and (width < s.screen('tablet')) {
+        background-size: 150%;
+        max-height: 340px;
+    }
+   
+}
+.product--iphone-pro {
+    background-image: url('/img/iphone_pro.png');
+    
+    height: 700px;
+    
+}
+.product--dark {
+    .product__title, .product__description {
+        color: s.color('background');
+    }
+    background-color: black;
+}
+.product__top {
+   .product__content {
+    align-content: flex-start;
+    
+   }
+}
+.product--button {
+    .product__content {
+     align-content: flex-end;
+     
+    }
+ }
+.product--light {
+    .product__title, .product__description {
+        color: s.color('fontDark');
+    }
+    background-color: #fafafa;
+}
+.product--iphone {
+    background-image: url('/img/iphone.png');
+    
+    height: 800px;
+    
+    
+}
+.product--watch {
+    background-image: url('/img/iwatch.png') ;
+}
+.product--double {
+    background-image: url('/img/tradeIn.png');
+    height: 580px;
+}
+.product--double2 {
+    background-image: url('/img/conference.png');
+    height: 580px;
+}
+.product--ipad {
+    background-image: url('/img/ipad.png');
+    height: 610px;
+}
+.product--business {
+    background-image: url('/img/business.png') ;
+    height: 610px;
+}
+.product--gift {
+    background-image:url('/img/gift.png')  ;
+    height: 580px;
+    
+}
+.product__title2 {
+    font-size: 40px;
+    line-height: 130%;
+    font-weight: 600;
+    text-align: center;
+    margin-right: 60px;
+    margin-left: 60px;
+}
+.product--card {
+    background-image:url('/img/card.png')  ;
+    height: 580px;
+    
+}
+.footer {
+    display: grid;
+    grid-template-columns: repeat(6,15%);
+    background-color: s.color('whiteLight');
+    padding: 20px s.space(30);
+    gap: s.space(8);
+    @media all and (width < s.screen('tablet')) {
+        grid-template-columns: repeat(3,40%); 
+      }  
+}
+.footer__title {
+    color: #1D1D1F;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 100%;
+    padding-bottom: s.space(2);
+}
+.footer__colnm {
+    flex-direction: column;
+    font-size: 12px;
+    padding: s.space(2);
+}
+.footer__link {
+    color: #424245;
+    @include s.click;
+
+}
